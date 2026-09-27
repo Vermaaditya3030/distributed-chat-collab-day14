@@ -1,0 +1,1 @@
+package com.aditya.day14.room; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class RoomTest { @Test void roomFields(){Room r=new Room();r.setName("team");r.setOwner("aditya");assertEquals("team",r.getName());assertEquals("aditya",r.getOwner());}}

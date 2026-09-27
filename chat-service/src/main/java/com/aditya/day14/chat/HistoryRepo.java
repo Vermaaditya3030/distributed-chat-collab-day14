@@ -1,0 +1,1 @@
+package com.aditya.day14.chat; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface HistoryRepo extends JpaRepository<History,UUID>{List<History> findTop100ByRoomIdOrderByCreatedAtDesc(String roomId);}

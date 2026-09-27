@@ -1,0 +1,8 @@
+server.port: 8081
+spring.datasource.url: jdbc:postgresql://${DB_HOST:postgres}:5432/chat
+spring.datasource.username: postgres
+spring.datasource.password: postgres
+spring.jpa.hibernate.ddl-auto: update
+spring.data.redis.host: ${REDIS_HOST:redis}
+spring.kafka.bootstrap-servers: ${KAFKA_BOOTSTRAP:kafka:9092}
+management.endpoints.web.exposure.include: health,info,prometheus

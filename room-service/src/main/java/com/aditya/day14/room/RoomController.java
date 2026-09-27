@@ -1,0 +1,2 @@
+package com.aditya.day14.room; import org.springframework.web.bind.annotation.*; import java.util.*;
+@RestController @RequestMapping("/api/rooms") public class RoomController { private final RoomRepo repo; public RoomController(RoomRepo r){repo=r;} @PostMapping public Room create(@RequestBody Room r){return repo.save(r);} @GetMapping public List<Room> all(){return repo.findAll();} @GetMapping("/{id}") public Room get(@PathVariable UUID id){return repo.findById(id).orElseThrow();} @DeleteMapping("/{id}") public void delete(@PathVariable UUID id){repo.deleteById(id);} }

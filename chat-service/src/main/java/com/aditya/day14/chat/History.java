@@ -1,0 +1,3 @@
+package com.aditya.day14.chat;
+import jakarta.persistence.*; import java.time.Instant; import java.util.UUID;
+@Entity public class History { @Id @GeneratedValue(strategy=GenerationType.UUID) UUID id; String roomId; String sender; @Column(length=4000) String content; Instant createdAt=Instant.now(); public UUID getId(){return id;} public String getRoomId(){return roomId;} public void setRoomId(String x){roomId=x;} public String getSender(){return sender;} public void setSender(String x){sender=x;} public String getContent(){return content;} public void setContent(String x){content=x;} public Instant getCreatedAt(){return createdAt;} }

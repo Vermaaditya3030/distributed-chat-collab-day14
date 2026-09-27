@@ -1,0 +1,2 @@
+package com.aditya.day14.chat; import org.springframework.web.bind.annotation.*; import java.util.*;
+@RestController @RequestMapping("/api/history") public class HistoryController { private final HistoryRepo repo; public HistoryController(HistoryRepo r){repo=r;} @GetMapping("/{roomId}") public List<History> get(@PathVariable String roomId){return repo.findTop100ByRoomIdOrderByCreatedAtDesc(roomId);} @PostMapping public History save(@RequestBody History h){return repo.save(h);} }

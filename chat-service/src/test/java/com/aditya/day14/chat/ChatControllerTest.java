@@ -1,0 +1,1 @@
+package com.aditya.day14.chat; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class ChatControllerTest { @Test void messageGetsTimestamp(){var m=new ChatController.Message("r","u","hi",System.currentTimeMillis()); assertEquals("hi",m.content()); assertNotNull(m.roomId());}}

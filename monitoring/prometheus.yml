@@ -1,0 +1,8 @@
+global: {scrape_interval: 15s}
+scrape_configs:
+ - job_name: chat
+   metrics_path: /actuator/prometheus
+   static_configs: [{targets: ["chat-service:8081"]}]
+ - job_name: rooms
+   metrics_path: /actuator/prometheus
+   static_configs: [{targets: ["room-service:8082"]}]
